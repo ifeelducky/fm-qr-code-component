@@ -4,25 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <!-- The QR Code dive is 320x500 -->
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Outfit:wght@100;500&family=Roboto&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | QR code component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; position: relative; margin-top: 42px; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    .p1  { font-size: 20px; font-family: 'Outfit', sans-serif; font-weight: 700; color: hsl(218, 44%, 22%); text-align: center; }
+    .p2  { font-size: 15px; font-family: 'Outfit', sans-serif; font-weight: 400; color:  hsl(220, 15%, 55%); text-align: center; }
+    .qr-code-div { background-color: white; width: 320px; align-items: center; padding: 20px; border-radius: 15px; margin-top: 150px; margin-left: auto; margin-right: auto; box-shadow: 0px 10px 5px  hsl(212, 45%, 87%);}
+    .qr-code { width: inherit; border-radius: 10px;}
+
+
+    @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="qr-code-div"] {
+    margin-top: 85px;
+  }
+    </style>
+
 </head>
-<body>
+<body style="background-color: hsl(212, 45%, 89%)">
 
-  Improve your front-end skills by building projects
+  <div class="qr-code-div">
+    <img class="qr-code" src="images/image-qr-code.png">
+    <p class="p1">Improve your front-end<br>skills by building projects</p>
+    <p  class="p2"> Scan the QR code to visit Frontend<br>Mentor and take your coding skills<br>to the next level </p>
+  </div>
 
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/ifeelducky">ifeelducky</a>.
   </div>
 </body>
 </html>
